@@ -1,4 +1,4 @@
-const AWS = ('aws-sdk');
+const AWS = require('aws-sdk');
 let s3 = new AWS.S3();
 require('dotenv').config();
 
@@ -15,7 +15,7 @@ exports.handler = async (event) => {
 
     statusCode: 200,
     body: JSON.stringify('Hello from Lambda!'),
-    
+
   };
 
   return response;
